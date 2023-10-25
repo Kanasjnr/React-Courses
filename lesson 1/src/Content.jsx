@@ -27,7 +27,7 @@ const Content = () => {
     </p>
 
     <button onClick={handleClick()}>Click it</button>
-    <button onClick={() => handleClickOne("Ali")}>Click it</button>
+    <button onClick={() => handleClickOne("Ali")}>Click Name</button>
     <button onClick={(e) => handleClickTwo(e)}>Click Now</button>
        </main>
     )
