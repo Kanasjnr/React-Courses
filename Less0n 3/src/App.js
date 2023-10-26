@@ -2,8 +2,7 @@ import './index.css'
 import Content from './Content'
 import Footer from './Footer'
 import Header from './Header'
-import Counter from './Counter'
-import ConText from './ConText'
+import ListComponent from './ListComponent'
 
 function App() {
   // const handleNameChange = () => {
@@ -14,14 +13,13 @@ function App() {
 
   return (
     <div className='App'>
-    
-        {/* Hello {handleNameChange()} */}
-        < Header />
-        < Content />
-        < ConText />
-        < Counter />
-        < Footer />
-  
+
+      {/* Hello {handleNameChange()} */}
+      < Header />
+      < Content />
+      < ListComponent />
+      < Footer />
+
     </div>
   )
 }
