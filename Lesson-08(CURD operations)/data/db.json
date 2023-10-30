@@ -1,0 +1,19 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "cheked": false,
+            "item": "React"
+        },
+        {
+            "id": 2,
+            "cheked": true,
+            "item": "Java Script"
+        },
+        {
+            "id": 3,
+            "cheked": true,
+            "item": "Node.js"
+        }
+    ]
+}
