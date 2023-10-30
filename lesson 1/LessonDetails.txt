@@ -1,7 +1,0 @@
-we talked about
-
-* introduction to react
-* App Component & JSX
-* Functional Components
-* Applying CSS Styles 
-* Click Events 
