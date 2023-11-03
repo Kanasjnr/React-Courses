@@ -17,23 +17,23 @@ function App() {
         const data = await response.json()
         // console.log(data);
         setItems(data)
-        
+
       } catch (error) {
         console.log(error);
       }
     }
     fetchItems()
   }, [reqType])
-  
+
 
   return (
     <div className='App'>
-      <Form reqType={reqType} setReqType={setReqType}/>
+      <Form reqType={reqType} setReqType={setReqType} />
       {/* <List items={items}/> */}
-      <Table items={items}/>
-      </div>
-     
-   
+      <Table items={items} />
+    </div>
+
+
   )
 }
 
