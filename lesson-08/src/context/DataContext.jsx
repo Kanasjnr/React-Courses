@@ -1,3 +1,3 @@
 import { createContext, useEffect, useState } from "react";
 
-const 
+const DataContext = createContext({})
