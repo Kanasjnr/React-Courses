@@ -11,6 +11,7 @@ import api from "./api/posts";
 import EditPost from "./EditPost";
 import UseWindowSize from "./hooks/useWindowSize";
 import useAxiosFetch from "./hooks/useAxiosFetch";
+import { DataProvider } from "./context/DataContext";
 
 
 const App = () => {
