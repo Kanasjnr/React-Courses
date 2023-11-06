@@ -1,4 +1,6 @@
 import { createContext, useEffect, useState } from "react";
+import UseWindowSize from "./hooks/useWindowSize";
+import useAxiosFetch from "./hooks/useAxiosFetch";
 
 const DataContext = createContext({})
 
