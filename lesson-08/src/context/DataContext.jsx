@@ -1,8 +1,7 @@
 import { createContext, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-
 import UseWindowSize from "../hooks/useWindowSize";
 import useAxiosFetch from "../hooks/useAxiosFetch";
+
 
 const DataContext = createContext({});
 
@@ -29,7 +28,7 @@ export const DataProvider = ({ children }) => {
     setSearchResult(filterResult.reverse());
   }, [posts, search]);
 
-  const navigate = useNavigate();
+
 
   return (
     <DataContext.Provider
