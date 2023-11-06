@@ -26,9 +26,9 @@ const App = () => {
 
 
   const { data, fetchError, isLoading } = useAxiosFetch('http://localhost:3500/posts')
-useEffect(() =>{
-  setPosts(data)
-},[data])
+  useEffect(() => {
+    setPosts(data)
+  }, [data])
 
   useEffect(() => {
     const filterResult = posts.filter(
@@ -104,9 +104,51 @@ useEffect(() =>{
   };
 
   return (
-   <DataProvider>
-    
-   </DataProvider>
+    <DataProvider>
+      <Routes>
+        <Route
+          path="/"
+          element={<HomeLayout search={search} setSearch={setSearch} width={width} />}
+        >
+          <Route index element={<Home posts={searchResult} fetchError={fetchError} isLoading={isLoading} />}
+          />
+          <Route path="/post">
+            <Route
+              index
+              element={
+                <NewPost
+                  postTitle={postTitle}
+                  setPostTitle={setPostTitle}
+                  postBody={postBody}
+                  setPostBody={setPostBody}
+                  handleSubmit={handleSubmit}
+                />
+              }
+            />
+
+            <Route
+              path=":id"
+              element={<PostPage posts={posts} handleDelete={handleDelete} />}
+            />
+          </Route>
+          <Route
+            path="/edit/:id"
+            element={
+              <EditPost
+                posts={posts}
+                handleEdit={handleEdit}
+                editTitle={editTitle}
+                editBody={editBody}
+                setEditBody={setEditBody}
+                setEditTitle={setEditTitle}
+              />
+            }
+          />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<Missing />} />
+        </Route>
+      </Routes>
+    </DataProvider>
   );
 };
 
