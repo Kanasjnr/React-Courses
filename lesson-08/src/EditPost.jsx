@@ -7,6 +7,7 @@ import { format } from "date-fns";
 const EditPost = () => {
     const [editTitle, setEditTitle] = useState("");
     const [editBody, setEditBody] = useState("");
+    
     const navigate = useNavigate()
 
   const { posts, setPosts } =
