@@ -1,11 +1,17 @@
 import { useContext, useState } from "react";
 import DataContext from "./context/DataContext";
-import {format} from "date-fns";
+import { format } from "date-fns";
+import { useNavigate } from "react-router-dom";
 
 const NewPost = () => {
+  
   const [postTitle, setPostTitle] = useState("");
   const [postBody, setPostBody] = useState("");
-  const {  } = useContext(DataContext);
+
+  const navigate = useNavigate();
+
+  const {} = useContext(DataContext);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const id = posts.length ? posts[posts.length - 1].id + 1 : 1;
@@ -17,7 +23,7 @@ const NewPost = () => {
       setPosts(allPost);
       setPostTitle("");
       setPostBody("");
-      navigate("/");
+      Navigate("/");
     } catch (error) {
       console.log(`Error: ${error.message}`);
     }
