@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { format } from "date-fns";
 import UseWindowSize from "../hooks/useWindowSize"
 import useAxiosFetch from "../hooks/useAxiosFetch"
@@ -82,8 +82,10 @@ export const DataProvider = ({ children }) => {
 
     return (
         <DataContext.Provider value={{
-            width,search,setSearch, //header and nav components
-            posts,fetchError,isLoading, searchResult //home
+            width, search, setSearch, //header and nav components
+            posts, fetchError, isLoading, searchResult, //home
+            postTitle, setPostTitle, postBody, setPostBody, handleSubmit, //New Post
+
         }}>
             {children}
         </DataContext.Provider>

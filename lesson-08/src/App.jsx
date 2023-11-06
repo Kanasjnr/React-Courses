@@ -91,20 +91,16 @@ const App = () => {
       <Routes>
         <Route
           path="/"
-          element={<HomeLayout  />}
+          element={<HomeLayout />}
         >
-          <Route index element={<Home/>}
+          <Route index element={<Home />}
           />
           <Route path="/post">
             <Route
               index
               element={
                 <NewPost
-                  postTitle={postTitle}
-                  setPostTitle={setPostTitle}
-                  postBody={postBody}
-                  setPostBody={setPostBody}
-                  handleSubmit={handleSubmit}
+
                 />
               }
             />
