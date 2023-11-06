@@ -33,16 +33,7 @@ export const DataProvider = ({ children }) => {
 
   const navigate = useNavigate();
 
-  const handleDelete = async (id) => {
-    try {
-      await api.delete(`/posts/${id}`);
-      const postLists = posts.filter((post) => post.id !== id);
-      setPosts(postLists);
-      navigate("/");
-    } catch (error) {
-      console.log(`Error: ${error.message}`);
-    }
-  };
+ 
 
   const handleEdit = async (id) => {
     const date = format(new Date(), "MMMM dd, yyyy pp");
@@ -65,19 +56,20 @@ export const DataProvider = ({ children }) => {
       value={{
         width,
         search,
-        setSearch, //header and nav components
+        setSearch,
         posts,
         fetchError,
         isLoading,
-        searchResult, //home
+        searchResult, 
 
-        handleDelete, // post page
         handleEdit,
         editTitle,
         editBody,
+
+
         setPosts,
         setEditBody,
-        setEditTitle, //Edit Post
+        setEditTitle,
       }}
     >
       {children}
