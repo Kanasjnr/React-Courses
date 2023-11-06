@@ -47,22 +47,7 @@ export const DataProvider = ({ children }) => {
         }
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        const id = posts.length ? posts[posts.length - 1].id + 1 : 1;
-        const date = format(new Date(), "MMMM dd, yyyy pp");
-        const newPost = { id, title: postTitle, date, body: postBody };
-        try {
-            const response = await api.post("/posts", newPost);
-            const allPost = [...posts, response.data];
-            setPosts(allPost);
-            setPostTitle("");
-            setPostBody("");
-            navigate("/");
-        } catch (error) {
-            console.log(`Error: ${error.message}`);
-        }
-    };
+  
 
     const handleEdit = async (id) => {
         const date = format(new Date(), "MMMM dd, yyyy pp");
