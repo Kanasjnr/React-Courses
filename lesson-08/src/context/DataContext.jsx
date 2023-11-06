@@ -1,5 +1,4 @@
 import { createContext, useEffect, useState } from "react";
-import React, { useEffect, useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { format } from "date-fns";
 import UseWindowSize from "./hooks/useWindowSize";
