@@ -4,7 +4,7 @@ import { format } from "date-fns";
 import { useNavigate } from "react-router-dom";
 
 const NewPost = () => {
-  
+
   const [postTitle, setPostTitle] = useState("");
   const [postBody, setPostBody] = useState("");
 
@@ -23,7 +23,7 @@ const NewPost = () => {
       setPosts(allPost);
       setPostTitle("");
       setPostBody("");
-      Navigate("/");
+      navigate("/");
     } catch (error) {
       console.log(`Error: ${error.message}`);
     }
