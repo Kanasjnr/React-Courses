@@ -85,7 +85,9 @@ export const DataProvider = ({ children }) => {
             width, search, setSearch, //header and nav components
             posts, fetchError, isLoading, searchResult, //home
             postTitle, setPostTitle, postBody, setPostBody, handleSubmit, //New Post
-            handleDelete // post page
+            handleDelete,// post page
+            handleEdit,editTitle,editBody,setEditBody,setEditTitle //Edit Post
+
 
         }}>
             {children}

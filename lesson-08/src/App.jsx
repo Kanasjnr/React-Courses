@@ -114,12 +114,7 @@ const App = () => {
             path="/edit/:id"
             element={
               <EditPost
-                posts={posts}
-                handleEdit={handleEdit}
-                editTitle={editTitle}
-                editBody={editBody}
-                setEditBody={setEditBody}
-                setEditTitle={setEditTitle}
+
               />
             }
           />
