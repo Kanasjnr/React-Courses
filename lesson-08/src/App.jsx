@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import { format } from "date-fns";
 import Home from "./Home";
 import NewPost from "./NewPost";
@@ -91,7 +91,7 @@ const App = () => {
       <Routes>
         <Route
           path="/"
-          element={<HomeLayout search={search} setSearch={setSearch} width={width} />}
+          element={<HomeLayout search={search} setSearch={setSearch} />}
         >
           <Route index element={<Home posts={searchResult} fetchError={fetchError} isLoading={isLoading} />}
           />
