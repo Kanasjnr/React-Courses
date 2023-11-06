@@ -11,8 +11,7 @@ export const DataProvider = ({ children }) => {
   const [posts, setPosts] = useState([]);
   const [search, setSearch] = useState("");
   const [searchResult, setSearchResult] = useState([]);
-  const [editTitle, setEditTitle] = useState("");
-  const [editBody, setEditBody] = useState("");
+
   const { width } = UseWindowSize();
 
   const { data, fetchError, isLoading } = useAxiosFetch(
