@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import DataContext from './context/DataContext'
 
