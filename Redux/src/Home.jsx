@@ -1,9 +1,12 @@
 import Feed from "./Feed";
+import { useStoreState } from "easy-peasy";
 
-const Home = ({ fetchError, isLoading }) => {
+const Home = ({ isLoading, fetchError }) => {
+  const searchResults = useStoreState((state) => state.searchResults);
+
   return (
     <main className="Home">
-      {isLoading && <p className="statusMsg">Loading Post...</p>}
+      {isLoading && <p className="statusMsg">Loading posts...</p>}
       {!isLoading && fetchError && (
         <p className="statusMsg" style={{ color: "red" }}>
           {fetchError}
@@ -11,10 +14,10 @@ const Home = ({ fetchError, isLoading }) => {
       )}
       {!isLoading &&
         !fetchError &&
-        (searchResult.length ? (
-          <Feed posts={searchResult} />
+        (searchResults.length ? (
+          <Feed posts={searchResults} />
         ) : (
-          <p className="statusMsg">No Post To Display</p>
+          <p className="statusMsg">No posts to display.</p>
         ))}
     </main>
   );

@@ -1,22 +1,23 @@
-import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import { useStoreActions, useStoreState } from "easy-peasy";
 
 const Nav = () => {
   const posts = useStoreState((state) => state.posts);
   const search = useStoreState((state) => state.search);
-
   const setSearch = useStoreActions((actions) => actions.setSearch);
-  const setSearchResult = useStoreActions((actions) => actions.setSearchResult);
+  const setSearchResults = useStoreActions(
+    (actions) => actions.setSearchResults
+  );
 
   useEffect(() => {
-    const filterResults = posts.filter(
+    const filterResult = posts.filter(
       (post) =>
         post.body.toLowerCase().includes(search.toLowerCase()) ||
         post.title.toLowerCase().includes(search.toLowerCase())
     );
-    setSearchResult(filterResults.reverse());
-  }, [posts, search, setSearchResult]);
+    setSearchResults(filterResult.reverse());
+  }, [posts, search, setSearchResults]);
 
   return (
     <nav className="Nav">
