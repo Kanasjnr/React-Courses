@@ -26,7 +26,7 @@ export default createStore({
   setSearch: action((state, payload) => {
     state.search = payload;
   }),
-  searchResults: "",
+  searchResults: [],
   setSearchResults: action((state, payload) => {
     state.searchResults = payload
   })
