@@ -28,7 +28,7 @@ useEffect(() => {
 
     <Routes>
       <Route path="/" element={<HomeLayout />}>
-        <Route index element={<Home />} />
+        <Route index element={<Home fetchError={fetchError} isLoading={isLoading} />} />
         <Route path="/post">
           <Route index element={<NewPost />} />
 
