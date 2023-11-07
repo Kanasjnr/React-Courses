@@ -31,10 +31,18 @@ export default createStore({
     state.searchResults = payload;
   }),
   setPostCount: computed((state) => state.posts.length),
-  getPostId: computed((id) => {
-    return posts.find((post) => post.id.toString() === id);
+  getPostById: computed((id) => {
+    return state.posts.find((post) => post.id.toString() === id);
   }),
   savePost: thunk(async (actions, newPost, helpers) => {
-        const {posts} = helpers.getState()
+    const { posts } = helpers.getState();
+    try {
+      const response = await api.post("/posts", newPost);
+      actions.setPosts([...posts, response.data]);
+      actions.setPostTitle("");
+      actions.setPostBody("");
+    } catch (err) {
+      console.log(`Error: ${err.message}`);
+    }
   }),
 });
