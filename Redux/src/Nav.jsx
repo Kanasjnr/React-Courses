@@ -16,7 +16,7 @@ const Nav = () => {
         post.title.toLowerCase().includes(search.toLowerCase())
     );
     setSearchResult(filterResults.reverse());
-  }, [posts, search]);
+  }, [posts, search, setSearchResult]);
 
   return (
     <nav className="Nav">
