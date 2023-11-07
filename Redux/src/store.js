@@ -45,4 +45,13 @@ export default createStore({
       console.log(`Error: ${err.message}`);
     }
   }),
+  deletePost: thunk(async (actions, id, helpers) => {
+    const { posts } = helpers.getState();
+    try {
+      await api.delete(`/posts/${id}`);
+      actions.setPosts(posts.filter((post) => post.id !== id));
+    } catch (err) {
+      console.log(`Error: ${err.message}`);
+    }
+  }),
 });
