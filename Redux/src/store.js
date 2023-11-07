@@ -28,7 +28,10 @@ export default createStore({
   }),
   searchResults: [],
   setSearchResults: action((state, payload) => {
-    state.searchResults = payload
+    state.searchResults = payload;
   }),
-  setPostCount: computed((state) => state.posts.length)
+  setPostCount: computed((state) => state.posts.length),
+  getPostId: computed((id) => {
+    return posts.find((post) => post.id.toString() === id);
+  }),
 });
