@@ -34,4 +34,5 @@ export default createStore({
   getPostId: computed((id) => {
     return posts.find((post) => post.id.toString() === id);
   }),
+  savePost: thunk(async () => {}),
 });
