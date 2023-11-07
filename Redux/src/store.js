@@ -5,3 +5,5 @@ export default createStore({
   posts: [],
   setPosts: action((state) => {}),
 });
+
+
