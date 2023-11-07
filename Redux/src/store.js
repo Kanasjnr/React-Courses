@@ -14,17 +14,16 @@ export default createStore({
   setPostBody: action((state, payload) => {
     state.postBody = payload;
   }),
-  editTitle:" ",
+  editTitle: " ",
   setEditTitle: action((state, payload) => {
     state.editTitle = payload;
   }),
-  editBody:" ",
+  editBody: " ",
   setEditBody: action((state, payload) => {
     state.editBody = payload;
   }),
-
-  search:"",
+  search: "",
   setSearch: action((state, payload) => {
     state.search = payload;
-  })
+  }),
 });
