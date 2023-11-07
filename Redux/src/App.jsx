@@ -10,25 +10,24 @@ import EditPost from "./EditPost";
 import useAxiosFetch from "./hooks/useAxiosFetch";
 import { useStoreActions } from "easy-peasy";
 
-
 const App = () => {
-
   const { data, fetchError, isLoading } = useAxiosFetch(
     "http://localhost:3500/posts"
-);
+  );
 
-    const setPosts = useStoreActions((actions) => actions.setPosts)
+  const setPosts = useStoreActions((actions) => actions.setPosts);
 
-
-useEffect(() => {
+  useEffect(() => {
     setPosts(data);
-}, [data, setPosts]);
+  }, [data, setPosts]);
 
   return (
-
     <Routes>
       <Route path="/" element={<HomeLayout />}>
-        <Route index element={<Home fetchError={fetchError} isLoading={isLoading} />} />
+        <Route
+          index
+          element={<Home fetchError={fetchError} isLoading={isLoading} />}
+        />
         <Route path="/post">
           <Route index element={<NewPost />} />
 
@@ -39,7 +38,6 @@ useEffect(() => {
         <Route path="*" element={<Missing />} />
       </Route>
     </Routes>
-
   );
 };
 
