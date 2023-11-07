@@ -54,4 +54,7 @@ export default createStore({
       console.log(`Error: ${err.message}`);
     }
   }),
+  editPost: thunk(async (actions, updatedPost, helpers) => {
+    const { posts } = helpers.getState();
+  }),
 });
