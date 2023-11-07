@@ -16,6 +16,10 @@ const App = () => {
   const { data, fetchError, isLoading } = useAxiosFetch(
     "http://localhost:3500/posts"
 );
+
+    const setPosts = useStoreActions(() => {})
+
+
 useEffect(() => {
     setPosts(data);
 }, [data]);
