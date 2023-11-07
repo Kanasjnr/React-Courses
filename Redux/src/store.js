@@ -58,12 +58,14 @@ export default createStore({
     const { posts } = helpers.getState();
     const { id } = updatedPost;
     try {
-        const response = await api.put(`/posts/${id}`, updatedPost);
-        actions.setPosts(posts.map(post => post.id === id ? { ...response.data } : post));
-        actions.setEditTitle('');
-        actions.setEditBody('');
+      const response = await api.put(`/posts/${id}`, updatedPost);
+      actions.setPosts(
+        posts.map((post) => (post.id === id ? { ...response.data } : post))
+      );
+      actions.setEditTitle("");
+      actions.setEditBody("");
     } catch (err) {
-        console.log(`Error: ${err.message}`);
+      console.log(`Error: ${err.message}`);
     }
-})
+  }),
 });
