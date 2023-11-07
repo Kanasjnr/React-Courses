@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import NewPost from "./NewPost";
@@ -7,9 +7,18 @@ import Missing from "./Missing";
 import About from "./About";
 import HomeLayout from "./HomeLayout";
 import EditPost from "./EditPost";
+import useAxiosFetch from "./hooks/useAxiosFetch";
 
 
 const App = () => {
+
+  const { data, fetchError, isLoading } = useAxiosFetch(
+    "http://localhost:3500/posts"
+);
+useEffect(() => {
+    setPosts(data);
+}, [data]);
+
   return (
 
     <Routes>
