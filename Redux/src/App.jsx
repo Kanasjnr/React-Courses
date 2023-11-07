@@ -8,6 +8,7 @@ import About from "./About";
 import HomeLayout from "./HomeLayout";
 import EditPost from "./EditPost";
 import useAxiosFetch from "./hooks/useAxiosFetch";
+import { useStoreActions } from "easy-peasy";
 
 
 const App = () => {
