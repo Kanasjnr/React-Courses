@@ -3,5 +3,5 @@ import api from "./api/posts";
 
 export default createStore({
   posts: [],
-  setPosts: action(() => {}),
+  setPosts: action((state) => {}),
 });
