@@ -3,7 +3,7 @@ import { useState,useEffect } from "react";
 import React from 'react'
 
 const App = () => {
-  const [useInput,setUserInput]
+  const [userInput,setUserInput] = useState('')
   return (
     <div>App</div>
   )
