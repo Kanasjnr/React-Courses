@@ -9,9 +9,9 @@ const App = () => {
   const [num2] = useState(5);
 
 
-  const sum = useCallback(() => num1 + num2, [num1,num2] )
+  const sum = () => num1 + num2;
 
- 
+  const buildArray = () =>{}
 
   useEffect(() =>{
     console.log(`New sum.value: ${sum()}`);
