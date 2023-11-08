@@ -9,6 +9,10 @@ const App = () => {
 
   const sum = () => num1 + num2;
 
+  useEffect(() =>{
+    console.log(``);
+  })
+
 }
 
 export default App;
