@@ -10,8 +10,8 @@ const App = () => {
   const sum = () => num1 + num2;
 
   useEffect(() =>{
-    console.log(``);
-  })
+    console.log(`New sum.value: ${sum()}`);
+  },[sum])
 
 }
 
