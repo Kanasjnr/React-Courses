@@ -5,7 +5,7 @@ import React from "react";
 
 const Counter = () => {
   const [count, setCount] = useState(0);
-  const [values, setValues] = useState([]);
+  const [values, setValues] = useState({firstName: "John", lastName: "Dave"});
 
   const plusButton = () => {
     // setCount(count + 1)
@@ -20,7 +20,7 @@ const Counter = () => {
   const resetButton = () => setCount(0);  
 
   const updateArray = (newVal) => {
-    
+        setValues({...values, last:"Dave"})
   };
 
 
