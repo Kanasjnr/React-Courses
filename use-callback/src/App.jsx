@@ -13,6 +13,13 @@ const App = () => {
     console.log(`New sum.value: ${sum()}`);
   },[sum])
 
+  return(
+    <main >
+
+    </main>
+  )
+
+
 }
 
 export default App;
