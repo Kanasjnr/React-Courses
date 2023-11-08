@@ -5,7 +5,7 @@ import React from "react";
 
 const Counter = () => {
   const [count, setCount] = useState(0);
-  const plusButton = () => setCount(count + 1);
+  const plusButton = () => setCount(prevState + 1);
   const minusButton = () => setCount(count - 1);
   const resetButton = () => setCount(0);
   return (
