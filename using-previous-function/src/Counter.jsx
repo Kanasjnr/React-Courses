@@ -5,7 +5,7 @@ import React from "react";
 
 const Counter = () => {
   const [count, setCount] = useState(0);
-  const [values, setValues] = useState({firstName: "John", lastName: "Dave"});
+  const [values, setValues] = useState({ first: "", last: "" });
 
   const plusButton = () => {
     // setCount(count + 1)
@@ -17,12 +17,13 @@ const Counter = () => {
     setCount((prev) => prev - 1);
   };
 
-  const resetButton = () => setCount(0);  
+  const resetButton = () => setCount(0);
 
   const updateArray = (newVal) => {
-        setValues({...values, last:"Dave"})
+    setValues({ ...values, last: "Dave" });
+    setValues((prev) => ({ ...prev, last: "Hassan" }));
   };
-
+  updateArray()
 
   return (
     <section className="Counter">
