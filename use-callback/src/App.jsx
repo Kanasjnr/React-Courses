@@ -9,7 +9,7 @@ const App = () => {
   const [num2] = useState(5);
 
 
-  const sum = () => num1 + num2;
+  const sum = useCallback(() => num1 + num2)
 
  
 
