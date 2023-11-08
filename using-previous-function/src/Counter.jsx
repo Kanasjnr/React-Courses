@@ -19,12 +19,7 @@ const Counter = () => {
 
   const resetButton = () => setCount(0);
 
-  const updateArray = (newVal) => {
-    setValues({ ...values, last: "Dave" });
-    setValues((prev) => ({ ...prev, last: "Hassan" }));
-  };
-  updateArray()
-  console.log(values)
+
 
   return (
     <section className="Counter">
