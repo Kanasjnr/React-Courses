@@ -24,6 +24,7 @@ const Counter = () => {
     setValues((prev) => ({ ...prev, last: "Hassan" }));
   };
   updateArray()
+  console.log(values)
 
   return (
     <section className="Counter">
