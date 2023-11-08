@@ -11,7 +11,7 @@ const App = () => {
 
   const sum = () => num1 + num2;
 
-  const buildArray = () =>{}
+ 
 
   useEffect(() =>{
     console.log(`New sum.value: ${sum()}`);
