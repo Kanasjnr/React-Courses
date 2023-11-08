@@ -4,7 +4,7 @@ import React from "react";
 
 const App = () => {
   const [userInput, setUserInput] = useState("");
-  const [result, useResult] = useState(0)
+  const [result, setResult] = useState(0)
   const [num1] = useState(4);
   const [num2] = useState(5);
 
@@ -15,6 +15,7 @@ const App = () => {
 
   useEffect(() =>{
     console.log(`New sum.value: ${sum()}`);
+
   },[sum])
 
   return(
