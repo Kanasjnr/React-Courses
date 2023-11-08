@@ -14,8 +14,8 @@ const App = () => {
   },[sum])
 
   return(
-    <main >
-
+    <main className="App">
+      <input type="text" placeholder="input" value={userInput}/>
     </main>
   )
 
