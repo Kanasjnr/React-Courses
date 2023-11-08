@@ -5,7 +5,7 @@ import React from "react";
 
 const Counter = () => {
   const [count, setCount] = useState(0);
-  const [value, setValue] = useState([]);
+  const [values, setValues] = useState([]);
 
   const plusButton = () => {
     // setCount(count + 1)
@@ -17,9 +17,13 @@ const Counter = () => {
     setCount((prev) => prev - 1);
   };
 
-  const updateArray = () => {};
+  const resetButton = () => setCount(0);  
 
-  const resetButton = () => setCount(0);
+  const updateArray = (newVal) => {
+    
+  };
+
+
   return (
     <section className="Counter">
       <h1>{count}</h1>
