@@ -9,15 +9,15 @@ const Counter = () => {
   const minusButton = () => setCount(count - 1);
   const resetButton = () => setCount(0);
   return (
-    <section >
+    <section className="Counter">
       <h1>{count}</h1>
 
-      <div >
+      <div className="calcBtn">
         <button onClick={plusButton}> +</button>
         <button onClick={minusButton}> -</button>
        
       </div>
-      <div className="rest">
+      <div className="reset">
       <button onClick={resetButton}> Reset </button>
       </div>
     </section>
