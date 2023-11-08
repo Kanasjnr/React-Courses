@@ -15,6 +15,7 @@ const App = () => {
 
   useEffect(() =>{
     console.log(`New sum.value: ${sum()}`);
+    setResult()
 
   },[sum])
 
