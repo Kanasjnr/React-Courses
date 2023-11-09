@@ -34,8 +34,8 @@ const App = () => {
 
       <br />
       <br />
-      
-      <h1>output:{userInput || ".."}</h1>
+
+    
     </main>
   );
 };
