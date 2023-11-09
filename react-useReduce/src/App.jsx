@@ -1,7 +1,7 @@
 import { useState} from "react";
 
 const App = () => {
- 
+ const [useInput, setUseInput] = useState('')
 
   
 
