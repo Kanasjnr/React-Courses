@@ -1,7 +1,7 @@
-import { useState,useReducer } from "react";
+import { useState, useReducer } from "react";
 
 const App = () => {
-  const [state, dispatch] = useReducer(reducer, {count:0})
+  const [state, dispatch] = useReducer(reducer, { count: 0 });
   const [userInput, setUserInput] = useState("");
   const [count, setCount] = useState(0);
   const [color, setColor] = useState(false);
@@ -12,7 +12,6 @@ const App = () => {
         onChange={(e) => setUserInput(e.target.value)}
         type="text"
         value={userInput}
-     
       />
 
       <br />
