@@ -23,6 +23,7 @@ const App = () => {
 
   return (
     <main className="App">
+      <label >Fibonacci Sequence:</label>
       <input
         type="text"
         placeholder="input"
