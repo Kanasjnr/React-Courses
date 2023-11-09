@@ -1,6 +1,10 @@
 import { useState, useEffect,useCallback,useMemo } from "react";
 
-import React from "react";
+const getArray =() =>{
+  for(let i = 0; i < 1000000000; i++){
+    
+  }
+}
 
 const App = () => {
   const [userInput, setUserInput] = useState("");
