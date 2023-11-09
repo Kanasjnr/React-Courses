@@ -19,11 +19,11 @@ const App = () => {
       <p> {count}</p>
 
       <section>
-        <button onClick={stopTimer}>Stop</button>
-        <button onClick={startTimer}>Start</button>
+        <button onClick={() => setCount((prev) => prev - 1)}>-</button>
+        <button onClick={() => setCount(prev + 1)}>+</button>
       </section>
 
-      <button onClick={resetTimer}>Reset</button>
+     
 
       <br />
       <br />
