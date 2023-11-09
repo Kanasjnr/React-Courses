@@ -6,17 +6,17 @@ const App = () => {
   const [color, setColor] = useState(false);
 
   return (
-    <main className="App"  style={{color: color ? '#fff' : '#fff92'}}>
+    <main className="App" style={{ color: color ? "#fff" : "#fff92" }}>
       <input
-        onChange={(e)=> setUserInput(e.target.value)}
+        onChange={(e) => setUserInput(e.target.value)}
         type="text"
         value={userInput}
         placeholder="Type anything"
       />
-      <p>Renders: {renders.current}</p>
 
       <br />
       <br />
+      <p> {count}</p>
 
       <section>
         <button onClick={stopTimer}>Stop</button>
