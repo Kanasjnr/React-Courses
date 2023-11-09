@@ -15,6 +15,13 @@ const reducer = (state, action) => {
   }
 };
 
+
+const ACTION = {
+  INCREMENT: "increment",
+  DECREMENT: "decrement",
+}
+
+
 const App = () => {
   const [state, dispatch] = useReducer(reducer, {
     count: 0,
