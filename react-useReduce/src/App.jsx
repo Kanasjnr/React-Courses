@@ -3,12 +3,8 @@ import { useState, useReducer } from "react";
 
 const reducer = (state, action) =>{
   switch (action.type) {
-    case value:
-      
-      break;
-  
-    default:
-      break;
+    case 'increment':
+      return{count: state.count}
   }
 }
 
