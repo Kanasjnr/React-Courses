@@ -35,13 +35,13 @@ const App = () => {
       <br />
       <br />
 
-    <label> Random Input:</label>
-    <input 
-    type="text"
-    value={randomInput}
-    placeholder="Type anything"
-    onChange={(e) => setRandomInput(e.target.value)}
-     />
+      <label> Random Input:</label>
+      <input
+        type="text"
+        value={randomInput}
+        placeholder="Type anything"
+        onChange={(e) => setRandomInput(e.target.value)}
+      />
     </main>
   );
 };
