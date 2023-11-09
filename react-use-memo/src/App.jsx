@@ -26,7 +26,7 @@ const App = () => {
       <label >Fibonacci Sequence:</label>
       <input
         type="text"
-        placeholder="input"
+        placeholder="position"
         value={userInput}
         onChange={(e) => setUserInput(e.target.value)}
       />
