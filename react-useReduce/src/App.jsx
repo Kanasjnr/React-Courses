@@ -1,16 +1,13 @@
 import { useState, useReducer } from "react";
 
-
-const reducer = (state, action) =>{
+const reducer = (state, action) => {
   switch (action.type) {
-    case 'increment':
-      return{count: state.count + 1}
-    case 'decrement':
-      return{count: state.count - 1}
+    case "increment":
+      return { count: state.count + 1 };
+    case "decrement":
+      return { count: state.count - 1 };
   }
-}
-
-
+};
 
 const App = () => {
   const [state, dispatch] = useReducer(reducer, { count: 0 });
