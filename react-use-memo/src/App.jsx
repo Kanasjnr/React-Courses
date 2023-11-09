@@ -17,13 +17,13 @@ const App = () => {
 
   const myArray = useMemo(() => getArray(), []);
 
-  useEffect(() =>{
+  useEffect(() => {
     console.log("New Array");
-  },[myArray])
+  }, [myArray]);
 
   return (
     <main className="App">
-      <label >Fibonacci Sequence:</label>
+      <label>Fibonacci Sequence:</label>
       <input
         type="text"
         placeholder="position"
@@ -31,6 +31,10 @@ const App = () => {
         onChange={(e) => setUserInput(e.target.value)}
       />
       <p>Number: {fibNumber || "--"}</p>
+
+      <br />
+      <br />
+      
       <h1>output:{userInput || ".."}</h1>
     </main>
   );
