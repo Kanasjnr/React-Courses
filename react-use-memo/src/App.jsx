@@ -2,8 +2,9 @@ import { useState, useEffect,useCallback,useMemo } from "react";
 
 const getArray =() =>{
   for(let i = 0; i < 1000000000; i++){
-    
+
   }
+  return ['Muhammed', "Fine Boy"]
 }
 
 const App = () => {
