@@ -6,7 +6,7 @@ const App = () => {
   const [color, setColor] = useState(false);
 
   return (
-    <main className="App" style={{ color: color ? "#fff" : "#fff92" }}>
+    <main className="App" style={{ color: color ? "#fff" : "#fff952" }}>
       <input
         onChange={(e) => setUserInput(e.target.value)}
         type="text"
