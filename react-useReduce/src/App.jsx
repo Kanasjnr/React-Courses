@@ -8,9 +8,9 @@ const App = () => {
   return (
     <main className="App"  style={{color: color ? '#fff' : '#fff92'}}>
       <input
-        onChange={handleInputChange}
+        onChange={(e)=> setUserInput(e.target.value)}
         type="text"
-        value={randomInput}
+        value={userInput}
         placeholder="Type anything"
       />
       <p>Renders: {renders.current}</p>
