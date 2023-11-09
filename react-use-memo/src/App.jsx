@@ -39,6 +39,8 @@ const App = () => {
     <input 
     type="text"
     value={randomInput}
+    placeholder="Type anything"
+    onChange={(e) => setRandomInput(e.target.value)}
      />
     </main>
   );
