@@ -7,7 +7,7 @@ const reducer = (state, action) => {
     case "decrement":
       return { ...state, count: state.count - 1 };
     case "newUserInput":
-      return { userInput: action.payload };
+      return { ...state, userInput: action.payload };
     case "tgColor":
       return { ...state, color: !state.color };
     default:
@@ -26,10 +26,10 @@ const App = () => {
   // const [color, setColor] = useState(false);
 
   return (
-    <main className="App" style={{ color: color ? "#fff" : "#fff952" }}>
+    <main className="App" style={{ color: state.color ? "#fff" : "#fff952" }}>
       <input
         type="text"
-        value={userInput}
+        value={state.userInput}
         onChange={(e) =>
           dispatch({ type: "newUserInput", payload: e.target.value })
         }
