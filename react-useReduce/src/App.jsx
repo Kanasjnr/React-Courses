@@ -11,7 +11,7 @@ const App = () => {
         onChange={(e) => setUserInput(e.target.value)}
         type="text"
         value={userInput}
-        placeholder="Type anything"
+     
       />
 
       <br />
@@ -19,22 +19,15 @@ const App = () => {
       <p> {count}</p>
 
       <section>
-        <button onClick={() => setCount(prev => prev - 1)}>-</button>
-        <button onClick={() => setCount(prev => prev+ 1)}>+</button>
-        <button onClick={() => setColor(prev =>  !prev)}>Color</button>
+        <button onClick={() => setCount((prev) => prev - 1)}>-</button>
+        <button onClick={() => setCount((prev) => prev + 1)}>+</button>
+        <button onClick={() => setColor((prev) => !prev)}>Color</button>
       </section>
 
-     
-
       <br />
       <br />
 
-      <p>Seconds: {Seconds}</p>
-
-      <br />
-      <br />
-
-      <p>{randomInput}</p>
+      <p>{userInput}</p>
     </main>
   );
 };
