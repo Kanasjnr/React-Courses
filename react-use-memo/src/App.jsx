@@ -16,10 +16,10 @@ const App = () => {
   
 
   useEffect(() =>{
-    console.log(`New sum.value: ${sum()}`);
-    setResult(sum())
+    console.log(`New sum.value: ${buildArray()}`);
+    setResult(buildArray())
 
-  },[sum,buildArray])
+  },[buildArray])
 
   return(
     <main className="App">
