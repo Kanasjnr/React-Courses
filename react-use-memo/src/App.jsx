@@ -35,7 +35,7 @@ const App = () => {
       <br />
       <br />
 
-    <label> Random Input</label>
+    <label> Random Input:</label>
     </main>
   );
 };
