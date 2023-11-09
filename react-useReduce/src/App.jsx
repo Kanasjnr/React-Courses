@@ -53,10 +53,10 @@ const App = () => {
       </section> */}
 
       <section>
-        <button onClick={() => dispatch({ type: "decrement" })}>-</button>
-        <button onClick={() => dispatch({ type: "increment" })}>+</button>
+        <button onClick={() => dispatch({ type: ACTION.DECREMENT })}>-</button>
+        <button onClick={() => dispatch({ type: ACTION.INCREMENT})}>+</button>
 
-        <button onClick={() => dispatch({ type: "tgColor" })}>Color</button>
+        <button onClick={() => dispatch({ type: ACTION.TG_COLOR })}>Color</button>
       </section>
 
       <br />
