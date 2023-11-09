@@ -30,6 +30,7 @@ const App = () => {
         value={userInput}
         onChange={(e) => setUserInput(e.target.value)}
       />
+      <p>Number: {fibNumber || "--"}</p>
       <h1>output:{userInput || ".."}</h1>
     </main>
   );
