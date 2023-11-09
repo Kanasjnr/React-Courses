@@ -2,14 +2,15 @@ import { useState} from "react";
 
 const App = () => {
  const [useInput, setUseInput] = useState('')
- const [count, setCount]
+ const [count, setCount] = useState(0)
+ const [color, setColor] = useState(false)
 
   
 
   return (
     <main className="App">
       <input
-        ref={inputRef}
+    
         onChange={handleInputChange}
         type="text"
         value={randomInput}
