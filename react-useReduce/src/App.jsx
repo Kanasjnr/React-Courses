@@ -27,7 +27,7 @@ const App = () => {
      
         type="text"
         value={userInput}
-        onChange={(e) => setUserInput(e.target.value)}
+        onChange={(e) => dispatch({type:'newUserInput', payload: e.target.value})}
      
       />
 
@@ -52,7 +52,7 @@ const App = () => {
       <br />
       <br />
 
-      <p>{userInput}</p>
+      <p>{state.userInput}</p>
     </main>
   );
 };
