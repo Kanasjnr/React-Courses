@@ -17,11 +17,10 @@ const useAxios = (configObj) => {
           signal: controller.signal,
         });
         console.log(res);
-        setResponse(res.data)
-
+        setResponse(res.data);
       } catch (error) {
         console.log(error);
-        setError(error.message)
+        setError(error.message);
       }
     };
   });
