@@ -7,15 +7,16 @@ const useAxios = (configObj) => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
 
-  useEffect(() =>{
-    const controller = new AbortController()
+  useEffect(() => {
+    const controller = new AbortController();
 
-    const fetchDta = async () =>{
-        try {
-            
-        } catch (error) {
-            
-        }
-    }
-  })
+    const fetchDta = async () => {
+      try {
+        const response = await axiosInstance[method.toLowerCase()](url, {
+          ...requestConfig,
+          signal: controller.signal,
+        });
+      } catch (error) {}
+    };
+  });
 };
