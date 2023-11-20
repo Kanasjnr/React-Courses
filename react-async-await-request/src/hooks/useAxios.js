@@ -10,7 +10,7 @@ const useAxios = (configObj) => {
   useEffect(() => {
     const controller = new AbortController();
 
-    const fetchDta = async () => {
+    const fetchData = async () => {
       try {
         const res = await axiosInstance[method.toLowerCase()](url, {
           ...requestConfig,
@@ -21,9 +21,14 @@ const useAxios = (configObj) => {
       } catch (error) {
         console.log(error);
         setError(error.message);
-      } finally{
+      } finally {
         setLoading(false);
       }
     };
+    fetchData();
+    return () => controller.abort();
   });
+  return [response, loading, error];
 };
+
+export default useAxios;
