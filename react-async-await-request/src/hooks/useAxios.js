@@ -6,4 +6,8 @@ const useAxios = (configObj) => {
   const [response, setResponse] = useState([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
+
+  useEffect(() =>{
+    
+  })
 };
