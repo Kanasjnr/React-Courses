@@ -1,5 +1,10 @@
 import { useState, useEffect } from "react";
 
-const useAxios = () => {
-    
+const useAxios = (configObj) => {
+        const{
+            axiosInstance,
+            method,
+            url,
+            requestConfig = {}
+        } = configObj
 };
