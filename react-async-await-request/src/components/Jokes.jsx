@@ -3,7 +3,7 @@ import useAxios from "../hooks/useAxios";
 import axios from "../apis/dadJokes";
 
 const Jokes = () => {
-  const [joke, error, loading] = useAxios({
+  const [joke, error, loading, refetch] = useAxios({
     axiosInstance: axios,
     method: "GET",
     url: "/",
@@ -25,6 +25,8 @@ const Jokes = () => {
         {!loading && !error && joke && <p>{joke ?.joke}</p>}
 
         {!loading && !error && !joke && <p>No Joke To Display! 😒😒</p>}
+
+        <button></button>
     </article>
   );
 };
