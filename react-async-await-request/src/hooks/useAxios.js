@@ -8,6 +8,14 @@ const useAxios = (configObj) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() =>{
-    
+    const controller = new AbortController()
+
+    const fetchDta = async () =>{
+        try {
+            
+        } catch (error) {
+            
+        }
+    }
   })
 };
