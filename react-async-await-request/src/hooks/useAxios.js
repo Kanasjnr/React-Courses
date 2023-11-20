@@ -8,16 +8,17 @@ const useAxios = (configObj) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const controller = new AbortController();
+    let isMounted = true;
+    //const controller = new AbortController();
 
     const fetchData = async () => {
       try {
         const res = await axiosInstance[method.toLowerCase()](url, {
           ...requestConfig,
-          signal: controller.signal,
+          //signal: controller.signal,
         });
         console.log(res);
-        setResponse(res.data);
+        isMounted && setResponse(res.data);
       } catch (error) {
         console.log(error);
         setError(error.message);
@@ -26,8 +27,11 @@ const useAxios = (configObj) => {
       }
     };
     fetchData();
-    return () => controller.abort();
-  });
+    //return () => controller.abort();
+    return () => {
+      isMounted = false;
+    };
+  }, []);
   return [response, loading, error];
 };
 
