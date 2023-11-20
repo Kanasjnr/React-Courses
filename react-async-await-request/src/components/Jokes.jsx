@@ -1,11 +1,20 @@
-import React from 'react'
+import React from "react";
+import useAxios from "../hooks/useAxios";
+import axios from "../apis/dadJokes";
 
 const Jokes = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  const [joke, error, loading] = useAxios({
+    axiosInstance: axios,
+    method: "GET",
+    url: "/",
+    requestConfig: {
+      headers: {
+        "content-Language": "en-US",
+      },
+    },
+  });
 
-export default Jokes
+  return <div></div>;
+};
+
+export default Jokes;
