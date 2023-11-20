@@ -34,8 +34,8 @@ const useAxios = (configObj) => {
     return () => {
       isMounted = false;
     };
-  }, []);
-  return [response, loading, error];
+  }, [reload]);
+  return [response, loading, error, refetch];
 };
 
 export default useAxios;
