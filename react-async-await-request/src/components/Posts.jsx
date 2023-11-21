@@ -38,6 +38,10 @@ const Posts = () => {
     <article>
       <h2>Posts</h2>
 
+      <div className="row">
+        <button onClick={() => handleSubmit()}></button>
+      </div>
+
       {loading && <p> loading...</p>}
 
       {!loading && error && <p className="errMsg">{error}</p>}
@@ -52,7 +56,7 @@ const Posts = () => {
         </ul>
       )}
 
-      {!loading && !error && !joke && <p>No Joke To Display! 😒😒</p>}
+      {!loading && !error && !posts?.length && <p>No Post To Display 😔</p>}
     </article>
   );
 };
