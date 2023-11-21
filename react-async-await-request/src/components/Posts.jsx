@@ -34,7 +34,11 @@ const Posts = () => {
     });
   };
 
-  return <div></div>;
+  return(
+<article>
+    
+</article>
+  ) 
 };
 
 export default Posts;
