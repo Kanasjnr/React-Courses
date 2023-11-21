@@ -26,20 +26,16 @@ const useAxios = () => {
     } finally {
       setLoading(false);
     }
-}
+  };
 
   useEffect(() => {
-    let isMounted = true;
-    //const controller = new AbortController();
+    console.log(controller);
 
-    const fetchData = async () => {};
-    fetchData();
-    //return () => controller.abort();
-    return () => {
-      isMounted = false;
-    };
-  }, [reload]);
-  return [response, loading, error, refetch];
+    //clean up
+
+    return () => controller.abort();
+  }, [controller]);
+  return [response, loading, error, axiosFetch];
 };
 
 export default useAxios;
