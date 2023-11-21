@@ -14,9 +14,12 @@ const useAxios = () => {
          } = configObj;
 
     try {
-     
         const ctrl = new AbortController()
-     
+      const res = await axiosInstance[method.toLowerCase()](url, {
+        ...requestConfig,
+        //signal: controller.signal,
+        
+      });
       console.log(res);
       isMounted && setResponse(res.data);
     } catch (error) {
