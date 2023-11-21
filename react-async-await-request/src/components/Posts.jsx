@@ -8,14 +8,23 @@ const Posts = () => {
   const getData = () => {
     axiosFetch({
       axiosInstance: axios,
-      method: "POST",
+      method: "GET",
       url: "/posts",
     });
   };
 
   useEffect (()=>{
+    //TO GET THE DATA FROM THE ENDPOINT
     getData();
   },[])
+
+  const handleSubmit = () =>{
+    axiosFetch({
+        axiosInstance: axios,
+        method: "POST",
+        url: "/posts",
+      });
+  }
 
   return <div></div>;
 };
