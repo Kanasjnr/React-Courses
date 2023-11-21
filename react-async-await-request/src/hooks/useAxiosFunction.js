@@ -26,7 +26,7 @@ const useAxios = () => {
     } finally {
       setLoading(true);
     }
-  };
+}
 
   useEffect(() => {
     let isMounted = true;
