@@ -14,7 +14,12 @@ const useAxios = () => {
          } = configObj;
 
     try {
+        setLoading(true)
         const ctrl = new AbortController()
+        setController(ctrl)
+      
+
+
       const res = await axiosInstance[method.toLowerCase()](url, {
         ...requestConfig,
         signal: ctrl.signal,
