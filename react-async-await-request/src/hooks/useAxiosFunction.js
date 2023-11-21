@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const useAxios = () => {
-  const { axiosInstance, method, url, requestConfig = {} } = configObj;
+ 
 
   const [response, setResponse] = useState([]);
   const [error, setError] = useState("");
