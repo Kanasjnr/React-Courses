@@ -7,7 +7,11 @@ const useAxios = () => {
   const [controller, setController] = useState();
 
   const axiosFetch = async (configObj) => {
-    const { axiosInstance, method, url, requestConfig = {} } = configObj;
+    const { axiosInstance,
+         method, 
+         url, 
+         requestConfig = {}
+         } = configObj;
 
     try {
       const res = await axiosInstance[method.toLowerCase()](url, {
