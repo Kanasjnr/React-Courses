@@ -40,6 +40,7 @@ const Posts = () => {
 
       <div className="row">
         <button onClick={handleSubmit}>Submit</button>
+        <button onClick={getData}>Re-request</button>
       </div>
 
       {loading && <p> loading...</p>}
