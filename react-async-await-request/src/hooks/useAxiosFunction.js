@@ -19,7 +19,7 @@ const useAxios = () => {
         signal: ctrl.signal,
       });
       console.log(res);
-      isMounted && setResponse(res.data);
+      setResponse(res.data);
     } catch (error) {
       console.log(error);
       setError(error.message);
