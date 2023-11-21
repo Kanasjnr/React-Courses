@@ -42,7 +42,9 @@ const Posts = () => {
 
       {!loading && error && <p className="errMsg">{error}</p>}
 
-      {!loading && !error && posts && <p>{joke?.joke}</p>}
+      {!loading && !error && posts?.length && {
+        
+      }}
 
       {!loading && !error && !joke && <p>No Joke To Display! 😒😒</p>}
     </article>
