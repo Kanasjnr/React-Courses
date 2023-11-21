@@ -24,7 +24,7 @@ const useAxios = () => {
       console.log(error);
       setError(error.message);
     } finally {
-      setLoading(false);
+      setLoading(true);
     }
   };
 
