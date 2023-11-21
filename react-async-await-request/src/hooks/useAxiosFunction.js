@@ -7,23 +7,16 @@ const useAxios = () => {
   const [controller, setController] = useState();
 
   const axiosFetch = async (configObj) => {
-    const { axiosInstance,
-         method, 
-         url, 
-         requestConfig = {}
-         } = configObj;
+    const { axiosInstance, method, url, requestConfig = {} } = configObj;
 
     try {
-        setLoading(true)
-        const ctrl = new AbortController()
-        setController(ctrl)
-      
-
+      setLoading(true);
+      const ctrl = new AbortController();
+      setController(ctrl);
 
       const res = await axiosInstance[method.toLowerCase()](url, {
         ...requestConfig,
         signal: ctrl.signal,
-        
       });
       console.log(res);
       isMounted && setResponse(res.data);
