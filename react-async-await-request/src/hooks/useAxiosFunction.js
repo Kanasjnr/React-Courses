@@ -5,8 +5,8 @@ const useAxios = () => {
 
   const [response, setResponse] = useState([]);
   const [error, setError] = useState("");
-  const [loading, setLoading] = useState(true);
-  const [reload, setReload] = useState(0);
+  const [loading, setLoading] = useState(false);
+  const [controller, setController] = useState();
 
   const refetch = () => setReload((prev) => prev + 1);
 
