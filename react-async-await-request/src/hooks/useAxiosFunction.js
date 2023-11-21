@@ -17,7 +17,7 @@ const useAxios = () => {
         const ctrl = new AbortController()
       const res = await axiosInstance[method.toLowerCase()](url, {
         ...requestConfig,
-        //signal: controller.signal,
+        signal: ctrl.signal,
         
       });
       console.log(res);
