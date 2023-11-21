@@ -3,9 +3,8 @@ import { useEffect } from "react";
 import useAxiosFunction from "../hooks/useAxiosFunction"
 
 
-import React from 'react'
-
 const Posts = () => {
+    const [response, loading, error, axiosFetch] = useAxiosFunction()
   return (
     <div>
       
