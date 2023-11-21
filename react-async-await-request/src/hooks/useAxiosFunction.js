@@ -33,7 +33,7 @@ const useAxios = () => {
 
     //clean up
 
-    return () => controller.abort();
+    return () =>controller &&  controller.abort();
   }, [controller]);
   return [response, loading, error, axiosFetch];
 };
