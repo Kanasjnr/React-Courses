@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import useAxiosFunction from "../hooks/useAxiosFunction";
 
 const Posts = () => {
-  const [response, loading, error, axiosFetch] = useAxiosFunction();
+  const [posts, loading, error, axiosFetch] = useAxiosFunction();
 
   const getData = () => {
     axiosFetch({
@@ -42,7 +42,7 @@ const Posts = () => {
 
       {!loading && error && <p className="errMsg">{error}</p>}
 
-      {!loading && !error && joke && <p>{joke?.joke}</p>}
+      {!loading && !error && posts && <p>{joke?.joke}</p>}
 
       {!loading && !error && !joke && <p>No Joke To Display! 😒😒</p>}
     </article>
